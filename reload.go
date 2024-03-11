@@ -22,7 +22,7 @@ func HandleLiveReload(mux *http.ServeMux, dirsToWatch ...string) {
 }
 
 func LiveReloadScriptHTML() template.HTML {
-	return `<script src="/livereload.js" type="text/javascript"></script>`
+	return `<script defer src="/livereload.js" type="text/javascript"></script>`
 }
 
 func serveLiveReloadScript(w http.ResponseWriter, r *http.Request) {
